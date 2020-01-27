@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'go test'
+        sh './build/run-tests.sh'
       }
       }
   }
