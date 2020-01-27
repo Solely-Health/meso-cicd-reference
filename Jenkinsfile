@@ -1,15 +1,10 @@
 pipeline {
-    agent any
+    agent { docker { image 'golang' } }
 
     stages {
-        stage('Build Bin') {
+        stage('build') {
             steps {
-                sh 'build/build-bin.sh'
-            }
-        }
-        stage('Build War') {
-            steps {
-                sh 'build/run-tests.sh'
+                sh 'go version'
             }
         }
     }
