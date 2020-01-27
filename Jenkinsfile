@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        go "Go 1.11"
-    }
-
     stages {
         stage('Build Bin') {
             steps {
