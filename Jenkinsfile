@@ -3,18 +3,20 @@ pipeline {
     docker {
       image 'golang'
     }
-  }
 
+  }
   stages {
     stage('Build') {
       steps {
-          sh 'go version'
+        sh 'go version'
       }
     }
+
     stage('Test') {
       steps {
         sh './build/run-tests.sh'
       }
-      }
+    }
+
   }
 }
