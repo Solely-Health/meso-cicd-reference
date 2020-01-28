@@ -14,7 +14,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        sh './build/run-tests.sh'
+        sh 'go test -v'
       }
     }
 
